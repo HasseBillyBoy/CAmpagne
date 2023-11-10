@@ -116,6 +116,13 @@ h1 {
   font-size: 16px;
 }
 
+.maingrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-rows: 1fr;
+  gap: 1em;
+}
+
 /* fordele slut */
 
 .nav--icons {
