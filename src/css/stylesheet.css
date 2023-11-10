@@ -21,7 +21,7 @@ body {
   text-align: center;
 }
 
-/* button start */
+/* --- button start --- */
 
 .button {
   align-items: center;
@@ -54,7 +54,9 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* button slut */
+/* --- button slut --- */
+
+/*  --- banner start --- */
 
 h1 {
   font-size: 65px;
@@ -63,6 +65,7 @@ h1 {
 .banner {
   max-width: 100%;
   position: relative;
+  height: 744px;
 }
 
 .MeldH1 {
@@ -74,11 +77,46 @@ h1 {
   overflow-wrap: break-word;
 }
 
+.fluff {
+  position: absolute;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  max-width: 15ch;
+  overflow-wrap: break-word;
+  transform: translate(0px, 430px);
+}
+
 .bannerbillede {
   scale: 0.75;
   z-index: -1;
   transform: translate(100px, -100px);
 }
+
+/* banner slut */
+
+/* fordele start */
+
+.fordele {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1ed;
+  margin: 0px;
+  margin-left: -10px;
+  text-align: center;
+}
+
+.medlemsfordeleH2 {
+  padding-top: 15px;
+  margin: 0px;
+  color: #054674;
+  font-family: "Nexa-Bold";
+  font-size: 16px;
+}
+
+/* fordele slut */
 
 .nav--icons {
   overflow: hidden;
