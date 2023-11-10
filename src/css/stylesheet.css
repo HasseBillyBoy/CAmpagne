@@ -99,13 +99,13 @@ h1 {
 /* fordele start */
 
 .fordele {
-  width: 400px;
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #f1f1ed;
   margin: 0px;
-  margin-left: -10px;
   text-align: center;
+  justify-content: center;
 }
 
 .medlemsfordeleH2 {
@@ -117,13 +117,65 @@ h1 {
 }
 
 .maingrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-template-rows: 1fr;
-  gap: 1em;
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.box {
+  box-sizing: border-box;
+  border-radius: 25%;
+  border: 2px solid #d54141;
+  width: 120px;
+  height: 120px;
+  background: #d54141;
+  margin: 20px;
+  font-family: "Nexa-Bold";
+  font-size: 14px;
+  color: #f1f1ed;
+  padding: 20px;
+  text-align: center;
+}
+
+.box:hover {
+  background: #f1f1ed;
+  color: #d54141;
+}
+
+.coins,
+.magnifying-glass,
+.insurance,
+.web,
+.handshake {
+  scale: 0.5;
+  filter: invert(1);
+  padding-bottom: 0px;
+}
+
+.law {
+  scale: 0.75;
+  filter: invert(1);
+  padding-bottom: 0px;
+}
+
+.law:hover {
+  filter: invert(67%) sepia(89%) saturate(7492%) hue-rotate(346deg)
+    brightness(84%) contrast(146%);
 }
 
 /* fordele slut */
+
+/* SoMe start */
+
+.somefloat {
+  display: flex;
+}
+
+/* SoMe slut */
 
 .nav--icons {
   overflow: hidden;
