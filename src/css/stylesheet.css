@@ -5,20 +5,29 @@
 
 body {
   background: #0a79ae;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .topflex {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .CAlogo {
   height: 100px;
+  margin: 8px 0px 0px 8px;
 }
 
 .buttoncontainer {
   height: 100px;
   text-align: center;
+  margin-right: 8px;
 }
 
 /* --- button start --- */
@@ -35,6 +44,7 @@ body {
   padding: 20px 50px 20px 50px;
   border-radius: 50px;
   margin-top: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover,
@@ -58,17 +68,26 @@ body {
 
 /*  --- banner start --- */
 
-h1 {
-  font-size: 65px;
-}
-
 .banner {
   max-width: 100%;
   position: relative;
   height: 744px;
 }
 
+.topnav {
+  display: none;
+}
+
+.MelddigDesktop {
+  display: none;
+}
+
+.Desktopbutton {
+  display: none;
+}
+
 .MeldH1 {
+  font-size: 65px;
   font-family: "Nexa-Bold";
   position: absolute;
   color: white;
@@ -86,6 +105,10 @@ h1 {
   max-width: 15ch;
   overflow-wrap: break-word;
   transform: translate(0px, 430px);
+}
+
+.fluffDesktop {
+  display: none;
 }
 
 .bannerbillede {
@@ -240,7 +263,7 @@ footer {
   background: #054674;
 }
 
-/* footer slutt */
+/* footer slut */
 
 /* Thumb nav start */
 
@@ -301,4 +324,93 @@ footer {
 
 .nowrap {
   white-space: nowrap;
+}
+
+@media only screen and (min-width: 799px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    width: 700px;
+    background: #d54141;
+    z-index: 2;
+    border-bottom-left-radius: 60px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .topp {
+    color: #f1f1ed;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 18px;
+  }
+
+  .MeldH1 {
+    display: none;
+  }
+
+  .MelddigDesktop {
+    display: block;
+    font-size: 120px;
+    font-family: "Nexa-Bold";
+    position: absolute;
+    color: white;
+    z-index: 2;
+    padding-left: 100px;
+    line-height: 1;
+    margin-top: 20px;
+  }
+
+  .bannerbillede {
+    scale: 0.8;
+    z-index: -1;
+    transform: translate(1150px, -230px);
+    overflow: hidden;
+  }
+
+  .nav--icons {
+    display: none;
+  }
+
+  .buttoncontainer {
+    display: none;
+  }
+
+  .fluff {
+    display: none;
+  }
+
+  .fluffDesktop {
+    display: block;
+    position: absolute;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    color: white;
+    transform: translate(105px, 340px);
+  }
+
+  .Desktopbutton {
+    display: block;
+    height: 100px;
+    width: 260px;
+    text-align: center;
+    margin-right: 8px;
+    transform: translate(100px, 500px);
+  }
+
+  .topnavhjem,
+  .topnavmeld,
+  .topnavfordele,
+  .topnavmitCA:hover {
+    cursor: pointer;
+  }
 }
