@@ -14,9 +14,12 @@ header {
 }
 
 .topflex {
-  width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.desktoplogo {
+  display: none;
 }
 
 .CAlogo {
@@ -28,6 +31,7 @@ header {
   height: 100px;
   text-align: center;
   margin-right: 8px;
+  margin-left: 60px;
 }
 
 /* --- button start --- */
@@ -117,9 +121,9 @@ header {
   transform: translate(100px, -100px);
 }
 
-/* banner slut */
+/* ----------- banner slut --------- */
 
-/* fordele start */
+/* ------- fordele start ---------- */
 
 .fordele {
   width: 100%;
@@ -128,7 +132,6 @@ header {
   background-color: #f1f1ed;
   margin: 0px;
   text-align: center;
-  justify-content: center;
 }
 
 .medlemsfordeleH2 {
@@ -140,6 +143,13 @@ header {
 }
 
 .maingrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+/* .maingrid {
   display: flex;
   width: 100%;
   height: auto;
@@ -147,7 +157,7 @@ header {
   flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
-}
+} */
 
 .box {
   box-sizing: border-box;
@@ -156,18 +166,19 @@ header {
   width: 120px;
   height: 120px;
   background: #d54141;
-  margin: 20px;
+  margin: 32px;
   font-family: "Nexa-Bold";
   font-size: 14px;
   color: #f1f1ed;
   padding: 20px;
   text-align: center;
+  fill: white;
 }
 
 .box:hover {
   background: #f1f1ed;
   color: #d54141;
-  fill: red;
+  fill: #d54141;
 }
 
 .samlebox {
@@ -179,7 +190,12 @@ header {
 
 .fordelep {
   margin-top: 0;
-  transform: translate(0px, -35px);
+  transform: translate(0px, -2px);
+}
+
+.fordelepweb {
+  margin-top: 0;
+  transform: translate(0px, -18px);
 }
 
 .fordelepbilligstudieforsikring {
@@ -192,13 +208,18 @@ header {
   transform: translate(0px, -50px);
 }
 
-.coins,
+.svg-icon {
+  scale: 2.5;
+  transform: translate(12px, 5px);
+}
+
+/* .coins,
 .magnifying-glass,
 .web,
 .handshake {
   scale: 0.5;
   transform: translate(0px, -40px);
-}
+}*/
 
 .white {
   fill: white;
@@ -219,9 +240,9 @@ header {
   transform: translate(0px, -110px);
 }
 
-/* fordele slut */
+/* ----------- fordele slut -------- */
 
-/* SoMe start */
+/* ------- SoMe start ----------- */
 
 .somestart {
   text-align: center;
@@ -239,19 +260,26 @@ h3 {
 }
 
 .somegrid {
-  max-width: 100%;
+  display: grid;
 }
 
 .somebox {
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 1em;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .somelogo {
+  margin-bottom: 20px;
+  margin-top: 20px;
   width: 40px;
   height: 40px;
+}
+
+.somevindue {
+  cursor: pointer;
+  width: 234px;
+  height: 447px;
 }
 
 /* SoMe slut */
@@ -260,7 +288,7 @@ h3 {
 
 footer {
   display: flex;
-  background: #054674;
+  background: #0a79ae;
 }
 
 /* footer slut */
@@ -326,10 +354,25 @@ footer {
   white-space: nowrap;
 }
 
+/* ------!!!----- MEDIA QUERY TIL DESKTOP -----!!!------- */
 @media only screen and (min-width: 799px) {
   header {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .desktopnav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .desktoplogo {
+    display: block;
+    max-width: 25%;
+  }
+
+  .CAlogo {
+    display: none;
   }
 
   .topnav {
@@ -371,7 +414,7 @@ footer {
   .bannerbillede {
     scale: 0.8;
     z-index: -1;
-    transform: translate(1150px, -230px);
+    transform: translate(1150px, -320px);
     overflow: hidden;
   }
 
@@ -407,10 +450,39 @@ footer {
     transform: translate(100px, 500px);
   }
 
+  .fordele {
+    transform: translate(0px, -120px);
+  }
+
+  .maingrid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .topnavhjem,
   .topnavmeld,
   .topnavfordele,
-  .topnavmitCA:hover {
+  .topnavmitCA,
+  .topp:hover {
     cursor: pointer;
+    color: white;
+  }
+
+  .medlemsfordeleH2 {
+    font-size: 20px;
+  }
+
+  .somegrid {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .SoMe {
+    margin-top: -100px;
+  }
+
+  footer {
+    display: none;
   }
 }
